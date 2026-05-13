@@ -114,7 +114,7 @@ export default function Home() {
                   whileTap={{ scale: 0.95 }}
                   className="group"
                 >
-                  <div className="flex items-center gap-3 px-8 py-4 bg-action text-white rounded-full font-medium hover:bg-action/90 transition-all shadow-lg">
+                  <div className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#DC9B9B] to-[#E57373] text-white rounded-full font-medium hover:shadow-xl transition-all shadow-lg">
                     <span>Explore Marketplace</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -296,7 +296,7 @@ export default function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 px-8 py-4 bg-action text-white rounded-full font-medium hover:bg-action/90 transition-all shadow-lg"
+                  className="flex items-center gap-2 px-8 py-4 bg-[#DC9B9B] text-white rounded-full font-medium hover:opacity-90 transition-all shadow-lg"
                 >
                   Get Started Today
                   <ArrowRight className="w-5 h-5" />

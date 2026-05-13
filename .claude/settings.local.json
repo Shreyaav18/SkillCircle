@@ -13,7 +13,8 @@
       "Bash(New-Item *)",
       "PowerShell(Set-Content *)",
       "Bash(npm run *)",
-      "PowerShell(Start-Process powershell -ArgumentList \"-Command\", \"npm run dev\" -WorkingDirectory \"D:\\\\6.1 Projects\\\\Skill Circle\\\\SkillCircle\" -WindowStyle Hidden)"
+      "PowerShell(Start-Process powershell -ArgumentList \"-Command\", \"npm run dev\" -WorkingDirectory \"D:\\\\6.1 Projects\\\\Skill Circle\\\\SkillCircle\" -WindowStyle Hidden)",
+      "PowerShell(Start-Process cmd -ArgumentList \"/c\", \"npm run dev\" -WorkingDirectory \"D:\\\\6.1 Projects\\\\Skill Circle\\\\SkillCircle\" -WindowStyle Normal)"
     ]
   }
 }

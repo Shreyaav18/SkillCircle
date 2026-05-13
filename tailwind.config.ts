@@ -11,8 +11,14 @@ const config: Config = {
       colors: {
         background: '#F6F4E8',
         card: '#E5EEE4',
-        action: '#DC9B9B',
-        barter: '#C0E1D2',
+        action: {
+          DEFAULT: '#DC9B9B',
+          500: '#DC9B9B',
+        },
+        barter: {
+          DEFAULT: '#C0E1D2',
+          500: '#C0E1D2',
+        },
         text: '#2D3436',
       },
       fontFamily: {
