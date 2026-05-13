@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Force -Recurse)",
+      "Bash(Select-Object FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(Get-ChildItem *)",
+      "PowerShell(npm install *)",
+      "PowerShell(mkdir *)",
+      "PowerShell(npm run *)",
+      "Bash(pkill *)",
+      "PowerShell(taskkill *)",
+      "Bash(New-Item *)",
+      "PowerShell(Set-Content *)",
+      "Bash(npm run *)",
+      "PowerShell(Start-Process powershell -ArgumentList \"-Command\", \"npm run dev\" -WorkingDirectory \"D:\\\\6.1 Projects\\\\Skill Circle\\\\SkillCircle\" -WindowStyle Hidden)"
+    ]
+  }
+}
