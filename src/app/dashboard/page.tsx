@@ -25,7 +25,7 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-card/50">
+      <div className="sticky top-16 z-10 bg-background/95 backdrop-blur-sm border-b border-card/50">
         <div className="container mx-auto px-6 py-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

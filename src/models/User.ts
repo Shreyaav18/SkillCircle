@@ -36,6 +36,9 @@ export interface TrustScore {
   quality: number; // 0-100
   speed: number; // 0-100
   barterHistory: number; // 0-100
+  reliability: number; // 0-100
+  communication: number; // 0-100
+  cooperation: number; // 0-100
   overall: number; // 0-100
 }
 

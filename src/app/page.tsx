@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { ArrowRight, Play, Sparkles, ArrowLeftRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { VideoBubbleGrid } from "@/components/cards/VideoBubble";
+import { InteractiveTalentShowcase } from "@/components/cards/InteractiveTalentShowcase";
 import { mockUsers } from "@/lib/constants/mockData";
 import { BentoGrid, BentoGridItem } from "@/components/layout/BentoGrid";
 
@@ -154,15 +154,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-card rounded-3xl p-8 shadow-soft"
-          >
-            <VideoBubbleGrid users={mockUsers.slice(0, 6)} maxPerRow={6} />
-          </motion.div>
+          <InteractiveTalentShowcase />
         </div>
       </section>
 

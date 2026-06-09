@@ -7,7 +7,7 @@ export const mockUsers: User[] = [
     id: '1',
     name: 'Riya Sharma',
     email: 'riya.sharma@email.com',
-    avatar: '/avatars/riya.jpg',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=256&h=256&q=80',
     bio: 'Full-stack developer with 5+ years of experience building scalable web applications.',
     skills: [
       {
@@ -61,6 +61,9 @@ export const mockUsers: User[] = [
       quality: 95,
       speed: 88,
       barterHistory: 92,
+      reliability: 94,
+      communication: 90,
+      cooperation: 91,
       overall: 92
     },
     portfolio: {
@@ -71,7 +74,7 @@ export const mockUsers: User[] = [
           id: 'p1',
           title: 'E-commerce Platform',
           description: 'Full-stack e-commerce solution with React and Node.js',
-          imageUrl: '/projects/ecommerce.jpg',
+          imageUrl: 'https://images.unsplash.com/photo-1563013544-824ae1d704d3?auto=format&fit=crop&w=600&h=400&q=80',
           url: 'https://github.com/riyasharma/ecommerce',
           tags: ['React', 'Node.js', 'MongoDB']
         }
@@ -85,7 +88,7 @@ export const mockUsers: User[] = [
     id: '2',
     name: 'Arjun Patel',
     email: 'arjun.patel@email.com',
-    avatar: '/avatars/arjun.jpg',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=256&h=256&q=80',
     bio: 'Creative UI/UX designer passionate about creating intuitive digital experiences.',
     skills: [
       {
@@ -139,6 +142,9 @@ export const mockUsers: User[] = [
       quality: 92,
       speed: 90,
       barterHistory: 85,
+      reliability: 91,
+      communication: 88,
+      cooperation: 89,
       overall: 89
     },
     portfolio: {
@@ -149,7 +155,7 @@ export const mockUsers: User[] = [
           id: 'p2',
           title: 'Banking App Design',
           description: 'Mobile banking app UI/UX design system',
-          imageUrl: '/projects/banking-app.jpg',
+          imageUrl: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&h=400&q=80',
           url: 'https://behance.net/arjunpatel/banking-app',
           tags: ['Figma', 'UI Design', 'Mobile App']
         }
@@ -163,7 +169,7 @@ export const mockUsers: User[] = [
     id: '3',
     name: 'Priya Singh',
     email: 'priya.singh@email.com',
-    avatar: '/avatars/priya.jpg',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=256&h=256&q=80',
     bio: 'Content writer specializing in tech blogs and marketing copy.',
     skills: [
       {
@@ -217,6 +223,9 @@ export const mockUsers: User[] = [
       quality: 94,
       speed: 86,
       barterHistory: 90,
+      reliability: 95,
+      communication: 93,
+      cooperation: 92,
       overall: 90
     },
     portfolio: {
@@ -226,7 +235,7 @@ export const mockUsers: User[] = [
           id: 'p3',
           title: 'Tech Blog Series',
           description: 'Comprehensive guide series on web development',
-          imageUrl: '/projects/tech-blog.jpg',
+          imageUrl: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&h=400&q=80',
           url: 'https://priyasinghwrites.com/web-dev-guide',
           tags: ['Tech Writing', 'Blogging', 'Education']
         }
@@ -240,7 +249,7 @@ export const mockUsers: User[] = [
     id: '4',
     name: 'Vikram Reddy',
     email: 'vikram.reddy@email.com',
-    avatar: '/avatars/vikram.jpg',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=256&h=256&q=80',
     bio: 'Python developer with expertise in data science and machine learning.',
     skills: [
       {
@@ -294,6 +303,9 @@ export const mockUsers: User[] = [
       quality: 91,
       speed: 87,
       barterHistory: 88,
+      reliability: 90,
+      communication: 86,
+      cooperation: 87,
       overall: 89
     },
     portfolio: {
@@ -303,7 +315,7 @@ export const mockUsers: User[] = [
           id: 'p4',
           title: 'ML Prediction Model',
           description: 'Machine learning model for sales prediction',
-          imageUrl: '/projects/ml-model.jpg',
+          imageUrl: 'https://images.unsplash.com/photo-1527474305487-b87b222841cc?auto=format&fit=crop&w=600&h=400&q=80',
           url: 'https://github.com/vikramreddy/sales-prediction',
           tags: ['Python', 'Machine Learning', 'Pandas']
         }
@@ -317,7 +329,7 @@ export const mockUsers: User[] = [
     id: '5',
     name: 'Ananya Desai',
     email: 'ananya.desai@email.com',
-    avatar: '/avatars/ananya.jpg',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&h=256&q=80',
     bio: 'Digital marketer helping businesses grow their online presence.',
     skills: [
       {
@@ -371,6 +383,9 @@ export const mockUsers: User[] = [
       quality: 93,
       speed: 89,
       barterHistory: 91,
+      reliability: 93,
+      communication: 92,
+      cooperation: 90,
       overall: 91
     },
     portfolio: {
@@ -380,7 +395,7 @@ export const mockUsers: User[] = [
           id: 'p5',
           title: 'Brand Campaign Strategy',
           description: 'Complete digital marketing campaign for startup',
-          imageUrl: '/projects/campaign.jpg',
+          imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&h=400&q=80',
           url: 'https://ananyadesai.in/startup-campaign',
           tags: ['Social Media', 'SEO', 'Strategy']
         }
