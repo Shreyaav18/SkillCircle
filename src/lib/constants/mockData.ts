@@ -34,7 +34,7 @@ export const mockUsers: User[] = [
     ],
     wants: [
       {
-        id: 'ui-ux',
+        id: 'ui-design',
         name: 'UI/UX Design',
         category: SkillCategory.DESIGN,
         level: SkillLevel.INTERMEDIATE,
@@ -44,6 +44,13 @@ export const mockUsers: User[] = [
         id: 'python',
         name: 'Python',
         category: SkillCategory.CODING,
+        level: SkillLevel.INTERMEDIATE,
+        yearsOfExperience: undefined
+      },
+      {
+        id: 'seo',
+        name: 'SEO Optimization',
+        category: SkillCategory.MARKETING,
         level: SkillLevel.INTERMEDIATE,
         yearsOfExperience: undefined
       }
@@ -115,8 +122,8 @@ export const mockUsers: User[] = [
     ],
     wants: [
       {
-        id: 'frontend',
-        name: 'Frontend Development',
+        id: 'react',
+        name: 'React Development',
         category: SkillCategory.CODING,
         level: SkillLevel.BEGINNER,
         yearsOfExperience: undefined
@@ -276,8 +283,8 @@ export const mockUsers: User[] = [
     ],
     wants: [
       {
-        id: 'web-dev',
-        name: 'Web Development',
+        id: 'react',
+        name: 'React Development',
         category: SkillCategory.CODING,
         level: SkillLevel.INTERMEDIATE,
         yearsOfExperience: undefined
@@ -356,9 +363,9 @@ export const mockUsers: User[] = [
     ],
     wants: [
       {
-        id: 'video-production',
-        name: 'Video Production',
-        category: SkillCategory.DESIGN,
+        id: 'typescript',
+        name: 'TypeScript Development',
+        category: SkillCategory.CODING,
         level: SkillLevel.INTERMEDIATE,
         yearsOfExperience: undefined
       },

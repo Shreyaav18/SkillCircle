@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { mockUsers } from '@/lib/constants/mockData';
 import { cn } from '@/lib/utils';
+import { useUserStore } from '@/lib/store/userStore';
 
 export function Navbar() {
   const pathname = usePathname();
@@ -28,8 +29,15 @@ export function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   
-  // Riya Sharma is mockUsers[0]
-  const currentUser = mockUsers[0];
+  // Hydration-safe state for currentUser
+  const storeUser = useUserStore((state) => state.currentUser);
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  
+  const currentUser = mounted ? storeUser : mockUsers[0];
   const barterCredits = 24; // Mock value matching dashboard
 
   const navItems = [
@@ -169,13 +177,13 @@ export function Navbar() {
                         <ArrowLeftRight className="h-4 w-4 text-text/60" />
                         <span>Barter Matches</span>
                       </Link>
-                      <button 
-                        onClick={() => alert('Profile settings placeholder')} 
+                      <Link 
+                        href="/settings" 
                         className="w-full flex items-center gap-2 px-3 py-2 text-sm text-text/80 hover:text-text rounded-xl hover:bg-card/50 transition-colors text-left focus:outline-none"
                       >
                         <Settings className="h-4 w-4 text-text/60" />
                         <span>Settings</span>
-                      </button>
+                      </Link>
                     </div>
 
                     <div className="border-t border-card/40 my-1" />
@@ -268,13 +276,13 @@ export function Navbar() {
               </div>
 
               <div className="mt-4 space-y-1">
-                <button 
-                  onClick={() => alert('Profile settings placeholder')} 
+                <Link 
+                  href="/settings" 
                   className="w-full flex items-center gap-2 px-3 py-2 text-sm text-text/80 rounded-xl hover:bg-card/40 transition-colors text-left"
                 >
                   <Settings className="h-4 w-4 text-text/60" />
                   <span>Account Settings</span>
-                </button>
+                </Link>
                 <button 
                   onClick={() => alert('Sign out placeholder')} 
                   className="w-full flex items-center gap-2 px-3 py-2 text-sm text-[#E57373] rounded-xl hover:bg-card/20 transition-colors text-left"

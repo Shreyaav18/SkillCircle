@@ -9,13 +9,33 @@ import { BarterMatch } from '../../models/BarterSwap';
 interface BarterTinderDeckProps {
   matches: BarterMatch[];
   onMatchAction?: (match: BarterMatch, action: 'like' | 'pass') => void;
+  onActiveMatchChange?: (match: BarterMatch | null) => void;
 }
 
 export const BarterTinderDeck: React.FC<BarterTinderDeckProps> = ({
   matches,
-  onMatchAction
+  onMatchAction,
+  onActiveMatchChange
 }) => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
+
+  // Store callback in a ref so it's never a useEffect dependency (avoids infinite loop)
+  const onActiveMatchChangeRef = React.useRef(onActiveMatchChange);
+  React.useEffect(() => {
+    onActiveMatchChangeRef.current = onActiveMatchChange;
+  });
+
+  // Notify parent only when currentIndex or matches length changes
+  React.useEffect(() => {
+    const notify = onActiveMatchChangeRef.current;
+    if (!notify) return;
+    if (matches.length > 0 && currentIndex < matches.length) {
+      notify(matches[currentIndex]);
+    } else {
+      notify(null);
+    }
+  }, [currentIndex, matches.length]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const controls = useAnimation();
 
   const currentMatch = matches[currentIndex];

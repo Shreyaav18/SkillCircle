@@ -6,6 +6,7 @@ import { BentoGrid, BentoGridItem } from '@/components/layout/BentoGrid';
 import { Wallet, ArrowLeftRight, TrendingUp, Award, Calendar, Clock } from 'lucide-react';
 import { mockUsers } from '@/lib/constants/mockData';
 import { HexagonalTrustRadar } from '@/components/ui/HexagonalTrustRadar';
+import { useUserStore } from '@/lib/store/userStore';
 
 const mockEarnings = {
   totalEarnings: 125000,
@@ -20,7 +21,14 @@ const mockEarnings = {
 };
 
 export default function DashboardPage() {
-  const currentUser = mockUsers[0];
+  const storeUser = useUserStore((state) => state.currentUser);
+  const [mounted, setMounted] = React.useState(false);
+  
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+  
+  const currentUser = mounted ? storeUser : mockUsers[0];
 
   return (
     <div className="min-h-screen bg-background">
