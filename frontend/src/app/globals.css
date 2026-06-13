@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --background: #F6F4E8;
+  --foreground: #2D3436;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Custom ambient animation keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(3deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+@keyframes grid-drift {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+@keyframes radar-pulse {
+  0% { transform: scale(0.2); opacity: 0.8; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.animate-radar-pulse {
+  animation: radar-pulse 3s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+}
+
+/* Engineering grid backgrounds */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(45, 52, 70, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(45, 52, 70, 0.03) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle, rgba(45, 52, 70, 0.04) 1px, transparent 1px);
+}
+
+/* Custom premium dropshadows and glassmorphism */
+.shadow-premium {
+  box-shadow: 0 10px 40px -10px rgba(220, 155, 155, 0.12),
+              0 1px 3px rgba(45, 52, 70, 0.02);
+}
+
+.shadow-mint {
+  box-shadow: 0 10px 30px -10px rgba(192, 225, 210, 0.25);
+}
+
+.shadow-rose {
+  box-shadow: 0 10px 30px -10px rgba(220, 155, 155, 0.2);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-panel-dark {
+  background: rgba(45, 52, 70, 0.02);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(45, 52, 70, 0.04);
+}
+
+/* Text gradients */
+.text-gradient-rose-mint {
+  background: linear-gradient(135deg, #DC9B9B 0%, #C0E1D2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-rose {
+  background: linear-gradient(135deg, #DC9B9B 0%, #E57373 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
