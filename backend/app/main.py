@@ -3,8 +3,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.shared.exceptions import register_exception_handlers
+from app.modules.skills.router import router as skills_router
 
 register_exception_handlers(app)
+app.include_router(skills_router, prefix="/api/v1")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
