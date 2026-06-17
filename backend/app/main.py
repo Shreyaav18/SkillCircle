@@ -4,9 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.shared.exceptions import register_exception_handlers
 from app.modules.skills.router import router as skills_router
-
-register_exception_handlers(app)
-app.include_router(skills_router, prefix="/api/v1")
+from app.modules.users.router import auth_router, users_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -27,6 +25,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+register_exception_handlers(app)
+
+app.include_router(skills_router, prefix="/api/v1")
+app.include_router(auth_router, prefix="/api/v1")
+app.include_router(users_router, prefix="/api/v1")
 
 @app.get("/")
 async def root():
